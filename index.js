@@ -25,21 +25,6 @@ const server = http.createServer((request, response) => {
             response.end(content)
         }
     }) 
-    // if (request.url === '/'){
-    //     let filePath = path.join(__dirname, 'notesApp', 'index.html')
-    //     fs.readFile(filePath, 'utf8', (err, data) => {
-    //        response.writeHead(200, {'Content-Type': 'text/html'})
-    //        response.end(data) 
-    //     })    
-    // }
-
-    // if (request.url === '/index2.html'){
-    //     let filePath = path.join(__dirname, 'notesApp', 'index2.html')
-    //     fs.readFile(filePath, 'utf8', (err, data) => {
-    //        response.writeHead(200, {'Content-Type': 'text/html'})
-    //        response.end(data) 
-    //     })    
-    // }
 })
 
 const getContentType = (filePath) => {
