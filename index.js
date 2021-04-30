@@ -5,9 +5,9 @@ const fs = require('fs')
 const http = require('http')
 
 const server = http.createServer((request, response) => {
-    let filePath = path.join(__dirname, 'notesApp', request.url === '/' ? 'index.html' : request.url)
+    let filePath = path.join(__dirname, 'public', request.url === '/' ? 'index.html' : request.url)
     let contentType = getContentType(filePath) || 'text/html'
-    let emptyPagePath = path.join(__dirname, 'notesApp', '404.html')
+    let emptyPagePath = path.join(__dirname, 'public', '404.html')
     fs.readFile(filePath, 'utf8', (err, content) => {
         if(err){
             if(err.code === 'ENOENT'){ // error code for a missing file
